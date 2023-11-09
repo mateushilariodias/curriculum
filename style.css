@@ -1,4 +1,94 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 5fr;
+    margin: 0;
+}
+
 header {
-    dispaly: flex;
-    justify-content: between;
+    grid-area: header;
+    position: fixed;
+}
+
+nav {
+    grid-area: nav;
+    position: fixed;
+}
+
+main {
+    grid-area: main;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.5rem 0.5rem 0rem;
+}
+
+#logo {
+    color: var(--Black, #111);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0.5rem 2.25rem;
+    align-items: flex-start;
+    gap: 90px;
+}
+
+.options {
+    color: #5A5A5F;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.75rem;
+    letter-spacing: 0.016rem;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+#developmentName {
+    color: var(--Black, #111);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%;
+}
+
+#ocupation {
+    color: rgba(95, 95, 95, 0.60);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100vh - 4.75rem);
+    padding-left: 2rem;
+}
+
+.navChild {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
