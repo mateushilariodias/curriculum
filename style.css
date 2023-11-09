@@ -5,22 +5,30 @@ body {
         "header header"
         "nav main";
     grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 7fr;
     margin: 0;
 }
 
 header {
     grid-area: header;
     position: fixed;
+    z-index: 3;
+    justify-content: space-between;
 }
 
 nav {
     grid-area: nav;
     position: fixed;
+    margin-top: 4rem;
+    z-index: 2;
 }
 
 main {
     grid-area: main;
+    margin: 4rem 0 0 1rem;
+    z-index: 1;
+    max-height: calc(100vh - 4.75rem); /* 4.75rem é a altura do header e nav */
+    overflow-y: auto;
 }
 
 header {
@@ -28,6 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2.5rem 0.5rem 0rem;
+    width: 100%;
 }
 
 #logo {
@@ -62,6 +71,7 @@ a {
     font-style: normal;
     font-weight: 600;
     line-height: 175%;
+    padding-right: 2.25rem;
 }
 
 #ocupation {
@@ -70,6 +80,7 @@ a {
     font-style: normal;
     font-weight: 500;
     line-height: 175%;
+    padding-right: 2.25rem;
 }
 
 nav {
