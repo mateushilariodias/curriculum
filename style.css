@@ -14,6 +14,12 @@ header {
     position: fixed;
     z-index: 3;
     justify-content: space-between;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2.5rem 0.5rem 0rem;
+    width: 100%;
 }
 
 nav {
@@ -21,6 +27,12 @@ nav {
     position: fixed;
     margin-top: 4rem;
     z-index: 2;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100vh - 4.75rem);
+    padding-left: 2rem;
 }
 
 main {
@@ -29,14 +41,6 @@ main {
     z-index: 1;
     max-height: calc(100vh - 4.75rem); /* 4.75rem é a altura do header e nav */
     overflow-y: auto;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 2.5rem 0.5rem 0rem;
-    width: 100%;
 }
 
 #logo {
@@ -84,16 +88,28 @@ a {
     padding-right: 2.25rem;
 }
 
-#ctaBodyOne {
-    display: none;
+#ctaBodyOneDesktop {
+    display: block; 
+    padding-top: 0.1rem;
+    padding-right: 2.25rem;
+    padding-botton: 0.1rem;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: calc(100vh - 4.75rem);
-    padding-left: 2rem;
+#ctaLinkOneDesktop {
+    padding: 1rem 1.5rem;
+}
+
+#ctaTextOneDesktop {
+    color: var(--FFFFFF-Bg-1, #FFF);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    gap: 1rem;
+}
+
+#ctaBodyOneMobile {
+    display: none;
 }
 
 .navChild {
@@ -101,7 +117,6 @@ nav {
     align-items: center;
     padding-bottom: 1rem;
 }
-
 
 h2 {
     font-size: 1.5rem;
@@ -124,21 +139,21 @@ h2 {
         font-size: 1rem;
     }
 
-    .options, #developmentName, #ocupation {
+    .options, #developmentName, #ocupation, #ctaBodyOneDesktop, #ctaLinkOneDesktop, #ctaTextOneDesktop, nav {
         display: none;
     }
 
-    #ctaBodyOne {
+    #ctaBodyOneMobile {
         display: block; 
         padding-top: 1rem;
         padding-right: 2.25rem;
     }
 
-    #ctaLinkOne {
+    #ctaLinkOneMobile {
         padding: 1rem 1.5rem;
     }
 
-    #ctaTextOne {
+    #ctaTextOneMobile {
         color: var(--FFFFFF-Bg-1, #FFF);
         font-size: 1rem;
         font-style: normal;
