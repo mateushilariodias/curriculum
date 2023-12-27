@@ -132,10 +132,10 @@ h2 {
     header {
         background-color: #f9f9f9;
         align-items: center;
-        padding: 0.5rem 2.5rem 1.5rem 0rem;
+        padding: 0.5rem 2.5rem 0.5rem 0rem;
     }
 
-    #logo {
+    #logo {0
         font-size: 1rem;
     }
 
@@ -144,8 +144,7 @@ h2 {
     }
 
     #ctaBodyOneMobile {
-        display: block; 
-        padding-top: 1rem;
+        display: flex; 
         padding-right: 2.25rem;
     }
 
