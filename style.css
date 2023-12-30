@@ -38,8 +38,7 @@ nav {
 main {
     grid-area: main;
     margin: 4rem 0 0 1rem;
-    z-index: 1;
-    max-height: calc(100vh - 4.75rem); /* 4.75rem é a altura do header e nav */
+    z-index: 1;/* 4.75rem é a altura do header e nav */
     overflow-y: auto;
 }
 
