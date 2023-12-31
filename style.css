@@ -87,27 +87,7 @@ a {
     padding-right: 2.25rem;
 }
 
-#ctaBodyOneDesktop {
-    display: block; 
-    padding-top: 0.1rem;
-    padding-right: 2.25rem;
-    padding-botton: 0.1rem;
-}
-
-#ctaLinkOneDesktop {
-    padding: 1rem 1.5rem;
-}
-
-#ctaTextOneDesktop {
-    color: var(--FFFFFF-Bg-1, #FFF);
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    gap: 1rem;
-}
-
-#ctaBodyOneMobile {
+#ctaBodyOneMobile, #myModal {
     display: none;
 }
 
@@ -138,7 +118,7 @@ h2 {
         font-size: 1rem;
     }
 
-    .options, #developmentName, #ocupation, #ctaBodyOneDesktop, #ctaLinkOneDesktop, #ctaTextOneDesktop, nav {
+    .options, #developmentName, #ocupation, nav {
         display: none;
     }
 
@@ -158,6 +138,38 @@ h2 {
         font-weight: 500;
         line-height: normal;
         gap: 1rem;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+    
+    .modal .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%
+        transform: translate(-50%, -50%);
+        background-color: #fefefe;
+        padding: 20px;
+        margin: 15% auto;
+        border: 1px solid #888;
+    }
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
     }
 
     main {
