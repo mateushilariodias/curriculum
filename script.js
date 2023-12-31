@@ -1,18 +1,23 @@
-const switchModal = () => {
-    const modal = document.querySelector('.modal')
-    const actualstyle = modal.style.display
-    if(actualstyle == 'block') {
-        modal. style.display = 'none'
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("ctaLinkOneMobile");
+    var span = document.getElementsByClassName("close")[0];
+    var header = document.querySelector("header");
+
+    btn.onclick = function() {
+        header.style.display = "none";
+        modal.style.display = "block";
     }
-    else {
-        modal. style.display = 'block'
+
+    span.onclick = function() {
+        modal.style.display = "none";
+        header.style.display = "flex";
     }
-}
-const btn = document.querySelector('#ctaBodyOneMobile')
-btn.addEventListener('click', switchModal)
-window. onclick = function (event) {
-    const modal = document.querySelector('.modal')
-    if (event. target == modal) {
-        switchModal ()
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            header.style.display = "flex";
+        }
     }
-}
+});
